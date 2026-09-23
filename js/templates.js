@@ -25,7 +25,7 @@ const projetosData = [
 ]; 
 const projetosHtml = projetosData.map(function(projeto) {
     return `
-        <div class="projeto" id="${projeto.id}">
+        <div class="projeto" id="${projeto.id}" tabindex="0">
             <span class="badge ${projeto.badge}">${projeto.categoria}</span>
             <h3>${projeto.titulo}</h3>
             <p>${projeto.texto}</p>
