@@ -2,5 +2,6 @@ const botaoMenu = document.getElementById('botao-menu');
 const menu = document.getElementById('menu-principal');
 
 botaoMenu.addEventListener('click',function() {
-    menu.classList.toggle('aberto');
+const menuAberto = menu.classList.toggle('aberto');
+botaoMenu.setAttribute('aria-expanded', menuAberto);
 });
