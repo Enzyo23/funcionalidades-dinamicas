@@ -25,7 +25,7 @@ const projetosData = [
 ]; 
 const projetosHtml = projetosData.map(function(projeto) {
     return `
-        <div class="projeto" id="${projeto.id}">
+        <div class="projeto" id="${projeto.id}" tabindex="0">
             <span class="badge ${projeto.badge}">${projeto.categoria}</span>
             <h3>${projeto.titulo}</h3>
             <p>${projeto.texto}</p>
@@ -101,20 +101,20 @@ export const template = {
                     <legend>Dados Pessoais</legend>
                     
                     <label for ="nome">Nome completo:</label>
-                    <input type ="text" id="nome" name="nome" placeholder=" " required>
-                    <span class ="erro-mensagem" id="erro-nome"></span>
+                    <input type ="text" id="nome" name="nome" placeholder=" " required aria-describedby="erro-nome">
+                    <span class ="erro-mensagem" id="erro-nome" role="alert"></span>
                     
                     <label for ="nascimento">Data de nascimento:</label>
-                    <input type ="date" id="nascimento" name="nascimento" placeholder=" " required>
-                    <span class ="erro-mensagem" id="erro-nascimento"></span>
+                    <input type ="date" id="nascimento" name="nascimento" placeholder=" " required aria-describedby="erro-nascimento">
+                    <span class ="erro-mensagem" id="erro-nascimento" role="alert"></span>
 
                     <label for ="email">E-mail:</label>
-                    <input type ="email" id ="email" name ="email" placeholder =" " required>
-                    <span class ="erro-mensagem" id="erro-email"></span>
+                    <input type ="email" id ="email" name ="email" placeholder =" " required aria-describedby="erro-email">
+                    <span class ="erro-mensagem" id="erro-email" role="alert"></span>
 
                     <label for ="cpf">CPF:</label>
-                    <input type ="text" id ="cpf" name ="cpf" pattern ="\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}" placeholder="000.000.000-00" required>
-                    <span class ="erro-mensagem" id="erro-cpf"></span>
+                    <input type ="text" id ="cpf" name ="cpf" pattern ="\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}" placeholder="000.000.000-00" required aria-describedby="erro-cpf">
+                    <span class ="erro-mensagem" id="erro-cpf" role="alert"></span>
 
                 </fieldset>
                     
@@ -122,8 +122,8 @@ export const template = {
                     <legend>Contato</legend>
 
                     <label for="telefone">Telefone:</label>
-                    <input type="tel" id="telefone" name="telefone" pattern="\\(\\d{2}\\) \\d{5}-\\d{4}" placeholder="(00) 00000-0000" required>
-                    <span class ="erro-mensagem" id="erro-telefone"></span>
+                    <input type="tel" id="telefone" name="telefone" pattern="\\(\\d{2}\\) \\d{5}-\\d{4}" placeholder="(00) 00000-0000" required aria-describedby="erro-telefone">
+                    <span class ="erro-mensagem" id="erro-telefone" role="alert"></span>
 
                 </fieldset>
                 
@@ -131,16 +131,16 @@ export const template = {
                     <legend>Endereço</legend>
                     
                     <label for="cep">CEP:</label>
-                    <input type="text" id="cep" name="cep" pattern="\\d{5}-\\d{3}" placeholder="00000-000" required>
-                    <span class ="erro-mensagem" id="erro-cep"></span>
+                    <input type="text" id="cep" name="cep" pattern="\\d{5}-\\d{3}" placeholder="00000-000" required aria-describedby="erro-cep">
+                    <span class ="erro-mensagem" id="erro-cep" role="alert"></span>
 
                     <label for="endereco">Endereço:</label>
-                    <input type="text" id="endereco" name="endereco" placeholder=" " required>
-                    <span class ="erro-mensagem" id="erro-endereco"></span>
+                    <input type="text" id="endereco" name="endereco" placeholder=" " required aria-describedby="erro-endereco">
+                    <span class ="erro-mensagem" id="erro-endereco" role="alert"></span>
 
                     <label for="cidade">Cidade:</label>
-                    <input type="text" id="cidade" name="cidade" placeholder=" " required>
-                    <span class ="erro-mensagem" id="erro-cidade"></span>
+                    <input type="text" id="cidade" name="cidade" placeholder=" " required aria-describedby="erro-cidade">
+                    <span class ="erro-mensagem" id="erro-cidade" role="alert" ></span>
                 </fieldset>
                 <button type="submit">Cadastrar</button>
             </form>
@@ -148,9 +148,9 @@ export const template = {
             <div id="lista-voluntarios"></div>
         </section>
         
-        <div id="modal-confirmacao" class="modal-overlay">
+        <div id="modal-confirmacao" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="titulo-modal">
         <div class="modal">
-        <h3>Cadastro enviado!</h3>
+        <h3 id="titulo-modal">Cadastro enviado!</h3>
         <p>Obrigado por se voluntariar. Entraremos em contato em breve.</p>
         <button id="fechar-modal">Fechar</button>
     </div>

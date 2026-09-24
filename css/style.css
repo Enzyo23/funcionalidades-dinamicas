@@ -286,6 +286,7 @@ input:focus {
 
 .badge-adocao {
     background-color: var(--cor-primaria);
+    color: var(--cor-texto);
 }
 .badge-saude {
     background-color: var(--cor-secundaria);
@@ -344,4 +345,19 @@ input:focus {
     color: #c0392b;
     font-size: 0.85rem;
     margin-top: 2px;
+}
+
+.pular-conteudo {
+    position: absolute;
+    top: -40px
+}
+
+.pular-conteudo:focus {
+    top: 0px;
+    color:#C0392b
+}
+
+.dropdown:focus-within .dropdown-menu {
+    display: flex;
+    flex-direction: column;
 }
