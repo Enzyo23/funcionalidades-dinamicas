@@ -345,3 +345,13 @@ input:focus {
     font-size: 0.85rem;
     margin-top: 2px;
 }
+
+.pular-conteudo {
+    position: absolute;
+    top: -40px
+}
+
+.pular-conteudo:focus {
+    top: 0px;
+    color:#C0392b
+}

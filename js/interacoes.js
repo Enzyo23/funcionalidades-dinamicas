@@ -2,24 +2,21 @@ const app = document.getElementById('app');
 
 // Monitora clicks na tela
 app.addEventListener('click' , function(evento) {
-    
-    //O 'closest' funciona como um "detector de radar" que sobe no HTML.
-    // Ele olha onde a pessoa clicou (texto, imagem, botão) e "sobe" procurando
-    // até achar a caixa maior que representa o projeto inteiro ('.projeto').
+    //"funciona como um radar que sobe da peça exata clicada, 
+    // até achar o card .projeto que a contém."
     const card = evento.target.closest('.projeto') ; 
     
-    // Se ele achou a caixa do projeto, adiciona ou remove o visual de destaque.
-    if (card) {
-        // 
+    if (card) { 
     card.classList.toggle('destacado');
     }
     
 });    
-// Monitora o teclado(acessibiliade)
+// Monitora o teclado se aperta alguma tecla(acessibiliade)
+//Sem esse listener,o usuario não conseguiria interagir com os cards.
 app.addEventListener('keydown', function(evento) {
-    //Se a pessoa apertar a tecla 'Enter'
+    //verificamos Enter porque é a tecla que confirma/ativa ,
+    // o que está selecionado (focado) no momento.
     if (evento.key==='Enter') {
-        //// Faz a mesma busca de radar: acha o projeto onde o usuário estava navegando.
         const card = evento.target.closest('.projeto');
         if (card) {
             card.classList.toggle('destacado') ;
