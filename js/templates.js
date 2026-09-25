@@ -37,7 +37,7 @@ export const template = {
     inicio: `
         <section>
         <h2>Quem Somos</h2>
-            <img src="../imagens/voluntaria-cao.jpg" alt="Voluntário do Instituto Patas Solidárias abraçando um cão resgatado em frente à sede da ONG" width="800" height="450">
+            <img src="/imagens/voluntaria-cao.jpg" alt="Voluntário do Instituto Patas Solidárias abraçando um cão resgatado em frente à sede da ONG" width="800" height="450">
             <p>O Instituto Patas Solidárias é uma organização dedicada ao resgate, cuidado e adoção responsável de animais em situação de abandono.</p>
         
         </section>
@@ -53,7 +53,7 @@ export const template = {
     projetos:` 
         <section>
             <h2>Nossos Projetos</h2>
-            <img src="../imagens/recepcao-instituto.jpg" alt="Recepção do Instituto Patas Solidárias, com voluntária alimentando um cão resgatado e mural ilustrado ao fundo" width="800" height="450">
+            <img src="/imagens/recepcao-instituto.jpg" alt="Recepção do Instituto Patas Solidárias, com voluntária alimentando um cão resgatado e mural ilustrado ao fundo" width="800" height="450">
             <div class="grid-projetos">
                 <!--
                 <div class="projeto" id="adocao">
