@@ -1,0 +1,24 @@
+{
+  "name": "funcionalidades-dinamicas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Enzyo23/funcionalidades-dinamicas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Enzyo23/funcionalidades-dinamicas/issues"
+  },
+  "homepage": "https://github.com/Enzyo23/funcionalidades-dinamicas#readme",
+  "devDependencies": {
+    "vite": "^8.3.1"
+  }
+}
