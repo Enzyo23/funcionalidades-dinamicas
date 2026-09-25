@@ -32,6 +32,33 @@
 --espaco-xl: 3rem;
 }
 
+ /*Implementando Modo Escuro*/
+
+@media (prefers-color-scheme:dark) {
+:root {
+    --cor-primaria:#E08A5C;
+    --cor-primaria-escura:#D9622A;   
+    --cor-secundaria:#6B9B7A;
+    --cor-secundaria-escura:#4F8560;
+
+    --cor-texto:#F0EBE4 ;
+    --cor-texto-suave:#B8AFA3;
+    --cor-fundo:#1E1B18;
+    --cor-fundo-alt:#2A2521;
+}
+}
+
+[data-tema="escuro"] {
+    --cor-primaria:#E08A5C;
+    --cor-primaria-escura:#D9622A;   
+    --cor-secundaria:#6B9B7A;
+    --cor-secundaria-escura:#4F8560;
+
+    --cor-texto:#F0EBE4 ;
+    --cor-texto-suave:#B8AFA3;
+    --cor-fundo:#1E1B18;
+    --cor-fundo-alt:#2A2521;
+}
 
 body {
     background-color: var(--cor-fundo);
