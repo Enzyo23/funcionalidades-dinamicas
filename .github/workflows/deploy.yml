@@ -1,5 +1,6 @@
 name: Deploy para Github Pages
-
+permissions:  
+  contents: write  
 
 on:
   push:
@@ -26,5 +27,6 @@ jobs:
             - name: Publicar no GitHub Pages
               uses: peaceiris/actions-gh-pages@v3
               with:
-                Github_token: ${{ secrets.GITHUB_TOKEN }}
-                Publish_dir : ./dist
+                github_token: ${{ secrets.GITHUB_TOKEN }}
+                publish_dir: ./dist
+
