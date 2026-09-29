@@ -32,6 +32,33 @@
 --espaco-xl: 3rem;
 }
 
+ /*Implementando Modo Escuro*/
+
+@media (prefers-color-scheme:dark) {
+:root {
+    --cor-primaria:#E08A5C;
+    --cor-primaria-escura:#D9622A;   
+    --cor-secundaria:#6B9B7A;
+    --cor-secundaria-escura:#4F8560;
+
+    --cor-texto:#F0EBE4 ;
+    --cor-texto-suave:#B8AFA3;
+    --cor-fundo:#1E1B18;
+    --cor-fundo-alt:#2A2521;
+}
+}
+
+[data-tema="escuro"] {
+    --cor-primaria:#E08A5C;
+    --cor-primaria-escura:#D9622A;   
+    --cor-secundaria:#6B9B7A;
+    --cor-secundaria-escura:#4F8560;
+
+    --cor-texto:#F0EBE4 ;
+    --cor-texto-suave:#B8AFA3;
+    --cor-fundo:#1E1B18;
+    --cor-fundo-alt:#2A2521;
+}
 
 body {
     background-color: var(--cor-fundo);
@@ -286,6 +313,7 @@ input:focus {
 
 .badge-adocao {
     background-color: var(--cor-primaria);
+    color: var(--cor-texto);
 }
 .badge-saude {
     background-color: var(--cor-secundaria);
@@ -344,4 +372,19 @@ input:focus {
     color: #c0392b;
     font-size: 0.85rem;
     margin-top: 2px;
+}
+
+.pular-conteudo {
+    position: absolute;
+    top: -40px
+}
+
+.pular-conteudo:focus {
+    top: 0px;
+    color:#C0392b
+}
+
+.dropdown:focus-within .dropdown-menu {
+    display: flex;
+    flex-direction: column;
 }

@@ -3,6 +3,7 @@ export function iniciarCadastro() {
     const form = document.querySelector('form');
     const modal = document.getElementById('modal-confirmacao');
     const fecharModal = document.getElementById('fechar-modal');
+    const botaoCadastro = form.querySelector('button[type="submit"]')
 
     carregarVoluntarios(); //mostra alista assi mque a página carrega.
 
@@ -44,12 +45,14 @@ export function iniciarCadastro() {
             localStorage.setItem('voluntarios', JSON.stringify(listaVoluntarios));
             carregarVoluntarios(); //atualiza a lista na tela com novo cadastro.
         modal.classList.add('aberto') ;
+        fecharModal.focus();
         }
     
     });
 
     fecharModal.addEventListener('click' , function() {
         modal.classList.remove('aberto');
+        botaoCadastro.focus();
 
     });
 }    
