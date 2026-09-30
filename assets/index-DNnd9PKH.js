@@ -1,7 +1,7 @@
 (function(){let e=document.createElement(`link`).relList;if(e&&e.supports&&e.supports(`modulepreload`))return;for(let e of document.querySelectorAll(`link[rel="modulepreload"]`))n(e);new MutationObserver(e=>{for(let t of e)if(t.type===`childList`)for(let e of t.addedNodes)e.tagName===`LINK`&&e.rel===`modulepreload`&&n(e)}).observe(document,{childList:!0,subtree:!0});function t(e){let t={};return e.integrity&&(t.integrity=e.integrity),e.referrerPolicy&&(t.referrerPolicy=e.referrerPolicy),t.credentials=e.crossOrigin===`use-credentials`?`include`:e.crossOrigin===`anonymous`?`omit`:`same-origin`,t}function n(e){if(e.ep)return;e.ep=!0;let n=t(e);fetch(e.href,n)}})();var e=document.getElementById(`botao-menu`),t=document.getElementById(`menu-principal`),n=document.getElementById(`botao-tema`);e.addEventListener(`click`,function(){let n=t.classList.toggle(`aberto`);e.setAttribute(`aria-expanded`,n)}),n.addEventListener(`click`,function(){document.documentElement.getAttribute(`data-tema`)===`escuro`?document.documentElement.removeAttribute(`data-tema`):document.documentElement.setAttribute(`data-tema`,`escuro`)});var r={inicio:`
         <section>
         <h2>Quem Somos</h2>
-            <img src="/imagens/voluntaria-cao.webp" alt="Voluntário do Instituto Patas Solidárias abraçando um cão resgatado em frente à sede da ONG" width="800" height="450">
+            <img src="/funcionalidades-dinamicas/imagens/voluntaria-cao.webp" alt="Voluntário do Instituto Patas Solidárias abraçando um cão resgatado em frente à sede da ONG" width="800" height="450">
             <p>O Instituto Patas Solidárias é uma organização dedicada ao resgate, cuidado e adoção responsável de animais em situação de abandono.</p>
         
         </section>
@@ -15,7 +15,7 @@
     `,projetos:` 
         <section>
             <h2>Nossos Projetos</h2>
-            <img src="/imagens/recepcao-instituto.webp" alt="Recepção do Instituto Patas Solidárias, com voluntária alimentando um cão resgatado e mural ilustrado ao fundo" width="800" height="450">
+            <img src="/funcionalidades-dinamicas/imagens/recepcao-instituto.webp" alt="Recepção do Instituto Patas Solidárias, com voluntária alimentando um cão resgatado e mural ilustrado ao fundo" width="800" height="450">
             <div class="grid-projetos">
                 <!--
                 <div class="projeto" id="adocao">
